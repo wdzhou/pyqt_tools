@@ -46,13 +46,13 @@ script:
   # lint the code and generate an error if a warning is introduced
   - flake8 . --count
   # static analysis for typing
-  - mypy widgets tests
+  - mypy pyqt_widgets tests
 
   # run some basic import tests to confirm things are working
   - python -c "import qtpy"
 
   # run pyqt_tools tests
-  - xvfb-run --server-args="-screen 0 640x480x24" --auto-servernum pytest --cov=widgets tests --disable-pytest-warnings -vv -r w
+  - xvfb-run --server-args="-screen 0 640x480x24" --auto-servernum pytest --cov=pyqt_widgets tests --disable-pytest-warnings -vv -r w
 
 after_success:
   - codecov
