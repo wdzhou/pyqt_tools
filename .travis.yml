@@ -51,6 +51,10 @@ script:
   # run some basic import tests to confirm things are working
   - python -c "import qtpy"
 
+  - echo "Current dir:" $PWD
+  - export PYTHONPATH=$PWD:$PYTHONPATH
+  - echo "Python path:" $PYTHONPATH
+
   # run pyqt_tools tests
   - xvfb-run --server-args="-screen 0 640x480x24" --auto-servernum pytest --cov=pyqt_widgets tests --disable-pytest-warnings -vv -r w
 
