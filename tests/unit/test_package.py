@@ -1,5 +1,5 @@
 import pytest
-import widgets
+from pyqt_widgets import widgets
 
 
 def test_helloworld():
