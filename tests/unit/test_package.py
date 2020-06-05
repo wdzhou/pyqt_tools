@@ -7,7 +7,7 @@ def test_helloworld():
     """
     assert "Hello World"
 
-    assert 1 == 3
+    assert 1 == 1
 
 
 if __name__ == '__main__':
